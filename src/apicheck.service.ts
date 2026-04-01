@@ -44,6 +44,13 @@ export interface AddressSearchParams {
   limit?: number;
 }
 
+export interface ApiCheckConfig {
+  apiKey: string;
+  referer?: string;
+}
+
+export const APICHECK_CONFIG = 'APICHECK_CONFIG';
+
 @Injectable({ providedIn: 'root' })
 export class ApiCheckService {
   private headers: Record<string, string>;
