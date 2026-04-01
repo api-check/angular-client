@@ -1,0 +1,39 @@
+{
+  "name": "@api-check/angular",
+  "version": "1.0.0",
+  "description": "Angular client for ApiCheck",
+  "keywords": ["apicheck", "angular", "address", "validation"],
+  "homepage": "https://apicheck.nl",
+  "license": "MIT",
+  "author": {"name": "ApiCheck", "email": "support@apicheck.nl"},
+  "repository": {"type": "git", "url": "https://github.com/api-check/angular-client"},
+  "peerDependencies": {
+    "@angular/common": ">=17.0.0",
+    "@angular/core": ">=17.0.0",
+    "rxjs": "^7.0.0"
+  },
+  "devDependencies": {
+    "@angular/common": "^18.0.0",
+    "@angular/compiler": "^18.0.0",
+    "@angular/compiler-cli": "^18.0.0",
+    "@angular/core": "^18.0.0",
+    "@angular/platform-browser": "^18.0.0",
+    "ng-packagr": "^18.0.0",
+    "typescript": "^5.4.0",
+    "zone.js": "^0.14.0"
+  },
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json"
+  },
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "types": "./dist/api-check-angular/index.d.ts",
+      "esm2022": "./dist/api-check-angular/esm2022/api-check-angular.mjs",
+      "esm": "./dist/api-check-angular/esm2022/api-check-angular.mjs",
+      "default": "./dist/api-check-angular/fesm2022/api-check-angular.mjs"
+    }
+  },
+  "sideEffects": false,
+  "publishConfig": {"access": "public"}
+}
